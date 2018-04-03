@@ -20,16 +20,19 @@ The dataset orginally has images of different heights and widths. The `create_da
 The following are the results when using `UpSampling2D`.
 
 __Original Image:__
+
 <br>
 <img src="images/results/upsampling/hr288x288.jpg" width="400"/>
 <br>
 
 __Low Resolution Input:__
+
 <br>
 <img src="images/results/upsampling/lr72x72.jpg" width="400"/>
 <br>
 
 __Generated High Resolution Output:__
+
 <br>
 <img src="images/results/upsampling/gen_hr288x288.jpg" width="400"/>
 <br>
@@ -38,15 +41,16 @@ __Generated High Resolution Output:__
 The learnt weights of the convolutional filters do not depend on the input image size. So, another model that takes a 288x288 images and generates a __4X__ higher resolution image was created by transferring the weights. The results quite good as shown below: 
 
 __Generated 4X High Resolution Output:__
+
 <br>
 <img src="images/results/upsampling/gen_hr1152x1152.jpg" width="400"/>
 <br>
 
 ### Checkerboard Artifacts
-An observation that can be made is that `Deconv2D` (when used instead of `UpSampling2D`), results in checkerboard artifacts. Refer to (this article)[https://distill.pub/2016/deconv-checkerboard/] for further details.
+An observation that can be made is that `Deconv2D` (when used instead of `UpSampling2D`), results in checkerboard artifacts. Refer to [this article](https://distill.pub/2016/deconv-checkerboard/) for further details.
 
 <br>
-<img src="iimages/results/checkerboard/gen_hr288x288_checker_box_1.jpg" width="400"/>
+<img src="images/results/checkerboard/gen_hr288x288_checker_box_1.jpg" width="400"/>
 <br>
 
 <br>
