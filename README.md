@@ -1,6 +1,7 @@
 # Image Super-Resolution
 ## Overview
 A CNN architechture (with residual connections) is trained to transform low resolution images to high resolution. The input to the model is a 72x72 image which is fed through a series of convolutional and residual blocks (to learn necessary features), and then upsampled (either by `UpSampling2D` or `Deconv2D` from `Keras`) to obtain a 288x288 image. 
+
 __Loss__: The loss used in for training the network is 'perceptual loss' or 'content loss'. Basically, both the generated high resolution image (G) and the original high resolution image (O) are fed to a VGG-16 network's conv base (not allowed to be trainable). The outputs at specific convolutional blocks for image G and image O are compared in terms of mean squared error (MSE), which is the loss function to be minimized. 
 
 ## Dataset
